@@ -1,0 +1,52 @@
+body {
+    text-align: center;
+}
+
+#counter {
+    font-size: 2em;
+    margin: 1em;
+}
+
+#number::after {
+    content: "0";
+}
+
+.count::after {
+    animation-duration: 10s;
+    animation-timing-function: steps(10, start);
+    animation-name: count;
+}
+
+@keyframes count {
+    0%,
+    100% {
+        content: "0";
+    }
+    10% {
+        content: "9";
+    }
+    20% {
+        content: "8";
+    }
+    30% {
+        content: "7";
+    }
+    40% {
+        content: "6";
+    }
+    50% {
+        content: "5";
+    }
+    60% {
+        content: "4";
+    }
+    70% {
+        content: "3";
+    }
+    80% {
+        content: "2";
+    }
+    90% {
+        content: "1";
+    }
+}
